@@ -18,5 +18,4 @@ const networkConfig = {
 
 const devChains = ["localhost", "hardhat"]
 
-
 export { networkConfig, devChains }

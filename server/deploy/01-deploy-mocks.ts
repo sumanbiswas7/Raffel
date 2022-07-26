@@ -15,8 +15,10 @@ const deployFunction: DeployFunction = async ({ getNamedAccounts, deployments })
             args: [BASE_FEE, GAS_PRICE_LINK],
             log: true
         })
+        console.log("-:-:-:-:-: Deploy Sucessfull :-:-:-:-:-")
     }
 }
 
 
 export default deployFunction;
+deployFunction.tags = ["all", "mocks"];

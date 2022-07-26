@@ -9,6 +9,7 @@ const deployFunction: DeployFunction = async ({ getNamedAccounts, deployments })
   const chainId = network.config.chainId;
   const config = networkConfig[chainId as keyof typeof networkConfig];
   let vrfCoordinator, subcriptionId;
+  console.log("::::: Deploying Raffle ...")
 
   if (devChains.includes(network.name)) {
     const vrfCoordinatorV2Mock = await ethers.getContract("VRFCoordinatorV2Mock");
@@ -32,6 +33,8 @@ const deployFunction: DeployFunction = async ({ getNamedAccounts, deployments })
     log: true
   })
 
+  console.log("-:-:-:-:-: Deploy Sucessfull :-:-:-:-:-")
 }
 
 export default deployFunction;
+deployFunction.tags = ["all", "raffle"];
